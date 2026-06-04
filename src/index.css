@@ -1,0 +1,25 @@
+body{
+    background-image: url(./assets/peakpx.jpg);
+    color: #df6a0b;
+
+    ::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #df6a0b;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #df6a0b;
+}
+
+}
+
+
