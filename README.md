@@ -152,9 +152,9 @@ npm run build
 
 ---
 
-## 🧑‍💻 Aprendizajes Clave y Conceptos (Explicados como Junior)
+## 🧑‍💻 Aprendizajes Clave y Conceptos 
 
-Si estás aprendiendo desarrollo web con React y TypeScript, aquí tienes un resumen sencillo de cómo resolvimos los desafíos más importantes:
+Si estás aprendiendo desarrollo web como yo  con React y TypeScript, aquí tienes un resumen sencillo de cómo resolvimos los desafíos más importantes:
 
 ### 1. ¿Cómo funciona `useDebounce` y por qué es vital?
 Cuando un usuario escribe en un campo de búsqueda, cada pulsación de tecla (`onChange`) actualiza el estado. Si enviáramos una petición a la API por cada letra, escribir *"Skywalker"* provocaría 9 peticiones en menos de 1 segundo. Esto saturaría el servidor de SWAPI y volvería lenta la aplicación.
