@@ -1,25 +1,99 @@
-body{
-    background-image: url(./assets/peakpx.jpg);
-    color: #df6a0b;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    ::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+:root {
+  color-scheme: dark;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050505;
+  color: #F5F5F5;
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Cinematic Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #050505;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #df6a0b;
-  border-radius: 999px;
+  background: rgba(216, 180, 90, 0.35);
+  border-radius: 3px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #df6a0b;
+  background: rgba(216, 180, 90, 0.7);
 }
 
+/* Hologram and Glass Accents */
+.holo-panel {
+  background: rgba(12, 12, 16, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 180, 90, 0.18);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8), 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.holo-panel-active {
+  border-color: rgba(216, 180, 90, 0.6);
+  box-shadow: 0 0 25px rgba(216, 180, 90, 0.25), inset 0 0 15px rgba(216, 180, 90, 0.08);
+}
 
+/* Sci-fi Terminal Bracket Accents */
+.corner-brackets {
+  position: relative;
+}
+.corner-brackets::before,
+.corner-brackets::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+}
+.corner-brackets::before {
+  top: 0;
+  left: 0;
+  border-top: 1.5px solid #D8B45A;
+  border-left: 1.5px solid #D8B45A;
+}
+.corner-brackets::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1.5px solid #D8B45A;
+  border-right: 1.5px solid #D8B45A;
+}
+
+/* Star Wars 3D Opening Crawl perspective container */
+.crawl-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  perspective: 450px;
+  overflow: hidden;
+}
+
+.crawl-content {
+  position: relative;
+  top: 100%;
+  transform-origin: 50% 100%;
+  transform: rotateX(25deg);
+  animation: crawl 45s linear infinite;
+}
+
+@keyframes crawl {
+  0% {
+    top: 100%;
+    transform: rotateX(25deg) translateZ(0);
+  }
+  100% {
+    top: -200%;
+    transform: rotateX(25deg) translateZ(-800px);
+  }
+}
